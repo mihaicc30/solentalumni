@@ -1,0 +1,59 @@
+<div>
+
+    <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+        <ol class="breadcrumb justify-content-center my-2">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Support</li>
+        </ol>
+    </nav>
+
+    <div style="max-width: 600px;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem auto;
+    position: relative;
+    padding: 5rem;
+    flex-direction: column;transition: .5s both;" class="chatbxcont rounded">
+        <ul id="chtbx" class="list-group w-100" style="height: 150px;overflow-y: scroll;transition: .5s both;">
+        </ul>
+        <div class="w-100 d-flex mt-1">
+            <input style="width: 300px;border-color: lightgrey;outline: none;" type="text" id="thetext">
+            <button class="w-25" style="border:none;" onclick="send()">Send</button>
+        </div>
+    </div>
+
+
+</div>
+
+<script defer>
+    setTimeout(() => {
+        document.getElementById('chtbx').innerHTML = `<li class="list-group-item">Hello! <span> ${new Date().toLocaleTimeString()}</span></li>`
+    }, 1111);
+    setTimeout(() => {
+        document.getElementById('chtbx').innerHTML += `<li class="list-group-item">My name is Daniel, Chat Support. <span> ${new Date().toLocaleTimeString()}</span></li>`
+    }, 2211);
+    setTimeout(() => {
+        document.getElementById('chtbx').innerHTML += `<li class="list-group-item">How may i help today? <span> ${new Date().toLocaleTimeString()}</span></li>`
+    }, 3311);
+
+    function send() {
+        if (document.getElementById('thetext').value.length < 1) return
+        document.getElementById('chtbx').innerHTML += `<li class="list-group-item text-end"><span>${new Date().toLocaleTimeString()} </span> ${document.getElementById('thetext').value}</li>`
+        document.getElementById('thetext').value = ``
+        document.getElementById('chtbx').scrollTo({
+            top: document.getElementById('chtbx').scrollHeight,
+            behavior: 'smooth'
+        });
+        setTimeout(() => {
+            if (document.querySelectorAll('li').length <= 25) document.getElementById('chtbx').innerHTML += `<li class="list-group-item">Thank you for your enquiry, please wait 2 minutes while i wil look it up. <span> ${new Date().toLocaleTimeString()}</span></li>`
+
+            document.getElementById('chtbx').scrollTo({
+                top: document.getElementById('chtbx').scrollHeight,
+                behavior: 'smooth'
+            });
+        }, 1444);
+    }
+
+</script>

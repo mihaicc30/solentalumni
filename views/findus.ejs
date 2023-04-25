@@ -1,0 +1,125 @@
+
+<nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+    <ol class="breadcrumb justify-content-center my-2">
+        <li class="breadcrumb-item"><a href="/">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Find Us</li>
+    </ol>
+</nav>
+<div class="d-flex flex-row flex-wrap align-items-center justify-content-evenly">
+
+
+    <div>
+        <div class="d-flex flex-column m-1 mb-3 p-1" style="width: fit-content;">
+            <p>Solent University, East Park Terrace</p>
+            <p>Southampton, SO14 0YN</p>
+            <p>02382013000</p>
+            <p>https://www.solent.ac.uk/</p>
+        </div>
+
+        <div class="d-flex flex-column m-1 p-1" style="width: fit-content;">
+            <p>Monday to Friday: 8am-9.30pm</p>
+            <p>Saturday: 9.30am-4.30pm</p>
+            <p>Sunday: 9.30am-4.30pm</p>
+        </div>
+
+        <div class="d-flex flex-column m-1 p-1 mt-4" style="width: fit-content;">
+            <p>Looking for a quick chat?</p>
+            <button style="border:none;" type="button"><a href="./support">Open Online Chat</a></button>
+        </div>
+
+
+        
+    </div>
+
+    <div>
+
+        <div class="d-flex flex-column align-items-center gap-2 mx-4" style="max-width: 500px;">
+
+            <p style="margin-top: 40px">Contact Form</p>
+
+            <div class="styled-input">
+                <input required type="text" id="a1">
+                <label>Name*</label>
+            </div>
+
+            <div class="styled-input">
+                <input required type="text" id="a2">
+                <label>Email*</label>
+            </div>
+
+            <div class="styled-input">
+                <input required type="text" id="a3">
+                <label>Subject</label>
+            </div>
+
+            <div class="styled-input textareaUpdate" style="height: unset !important;">
+                <textarea required type="text" id="a4" cols="22" rows="10"></textarea>  
+                <label>Your query*</label>
+            </div>
+
+
+            <div class="styled-input mb-4 d-flex align-items-center">
+                
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">📧Send!</button>
+            </div>
+        </div>
+    </div>
+    <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2515.832039681931!2d-1.4025687841325363!3d50.90832386214736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487476b1943c33e9%3A0x7b3d2a7c433db059!2sSolent%20University!5e0!3m2!1sen!2suk!4v1677275345148!5m2!1sen!2suk"
+            height="350" style="border:0;width: 100%;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+<symbol id="check-circle-fill" fill="currentColor" viewBox="0 0 16 16">
+    <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+</symbol>
+<symbol id="info-fill" fill="currentColor" viewBox="0 0 16 16">
+    <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/>
+</symbol>
+<symbol id="exclamation-triangle-fill" fill="currentColor" viewBox="0 0 16 16">
+    <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+</symbol>
+</svg>
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Success!</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body d-flex flex-column align-items-center">
+
+                                
+                <div class="alert alert-success d-flex align-items-center w-100" role="alert">
+                    <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:"><use xlink:href="#check-circle-fill"/></svg>
+                    <div>Your message has been sent! One of our staff members will get in touch as soon as possible.</div>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<script defer>
+    document.querySelectorAll('input').forEach(inp=>{
+        inp.addEventListener('click', function(){
+                document.getElementById('a1').value="Jim Johnson"
+                document.getElementById('a2').value="Jim.Johnson@solent.co.uk"
+                document.getElementById('a3').value="Course Options"
+                document.getElementById('a4').value="Hi. I want to discuss with the right person about further education and what are my options. Can someone send me a brochure please? Thank you!"
+                
+        }, {once:true})
+    })
+</script>

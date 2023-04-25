@@ -1,0 +1,110 @@
+<div class="update-acc-alumni">
+    
+    <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+        <ol class="breadcrumb justify-content-center my-2">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Update Account</li>
+        </ol>
+    </nav>
+
+
+    <div id="step2" class="spinner-border d-flex m-auto" style="width: 3rem; height: 3rem;" role="status">
+        <span class="visually-hidden ">Loading...</span>
+    </div>
+
+    <div id="step3" class="alert alert-success justify-content-center" role="alert">
+        <p>Account updated!</p>
+      </div>
+
+    <div>
+    <div  id="step1" class="d-flex justify-content-center flex-wrap" style="max-width: 700px;margin: 0 auto;">
+
+
+        <div class="d-flex flex-column align-items-center gap-2 mx-4" style="max-width: 500px;">
+            <div class="styled-input" style="margin-top: 40px">
+                <input required type="text" id="a1">
+                <label>Name*</label>
+            </div>
+
+            <div class="styled-input">
+                <input required type="text" id="a2">
+                <label>Email*</label>
+            </div>
+
+            <div class="styled-input">
+                <input required type="text" id="a3">
+                <label>Password</label>
+            </div>
+
+            <div class="styled-input">
+                <input required type="text" id="a4">
+                <label>Confirm Password</label>
+            </div>
+
+        </div>
+
+        <div class="d-flex flex-column align-items-center gap-2 mx-4" style="max-width: 500px;">
+            <div class="styled-input" style="margin-top: 40px">
+                <input required type="text" id="aa1">
+                <label>Address Line1</label>
+            </div>
+
+            <div class="styled-input">
+                <input required type="text" id="aa2">
+                <label>Address Line2</label>
+            </div>
+
+            <div class="styled-input">
+                <input required type="text" id="aa3">
+                <label>City</label>
+            </div>
+
+            <div class="styled-input">
+                <input required type="text" id="aa4">
+                <label>Country</label>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="styled-input mb-4 d-flex align-items-center mt-4">
+        <button style="width: 240px;transition: 1s;" type="button" onclick="step(); this.style.opacity=0">Update!</button>
+    </div>
+   </div>
+</div>
+
+<script>
+    function step(){
+        document.getElementById('step1').style.opacity=0
+        document.getElementById('step2').style.display="flex"
+        document.getElementById('step2').style.opacity=1
+        document.querySelector('button').style.display="none"
+        setTimeout(() => {
+            
+            document.getElementById('step2').style.opacity=0
+            document.getElementById('step2').style.display="none"
+
+            setTimeout(() => {
+                document.getElementById('step3').style.display="flex"
+                document.getElementById('step3').style.opacity=1
+            }, 800);
+        }, 1111);
+    }
+</script>
+
+<script defer>
+    document.querySelectorAll('input').forEach(inp=>{
+        inp.addEventListener('click', function(){
+                document.getElementById('a1').value="Jim Johnson"
+                document.getElementById('a2').value="Jim.Johnson@solent.co.uk"
+                document.getElementById('a3').value="**********"
+                document.getElementById('a4').value="**********"
+                
+                document.getElementById('aa1').value="House 2"
+                document.getElementById('aa2').value="Dave Street"
+                document.getElementById('aa3').value="Worcester"
+                document.getElementById('aa4').value="UK"
+        }, {once:true})
+    })
+</script>
